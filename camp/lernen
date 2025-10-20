@@ -1,0 +1,25 @@
+if __name__ == "__main__":
+    main()
+
+# == nicht = sondern ==
+
+
+global x
+# global wird kleingeschrieben
+
+
+arten von dokumenten
+
+spontan
+projektbezogen
+langfristig
+
+
+Ordner Struktur
+spontan = neu
+projektbezogen = main, side, camp
+langfristig = archiv
+
+main = relevant
+side = nicht so relevant
+camp = trainieren
