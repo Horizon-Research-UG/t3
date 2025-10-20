@@ -48,8 +48,6 @@ function showNames() {
 
 // Liste ein-/ausblenden
 function toggleMarkerList() {
-    // Visueller Test - Alert statt Konsole
-    alert('Button wurde geklickt! Die Funktion funktioniert.');
     
     const container = document.getElementById('markerListContainer');
     const button = document.querySelector('.show-list-btn');
