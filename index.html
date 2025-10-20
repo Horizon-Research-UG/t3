@@ -24,6 +24,13 @@
                 <ul id="nameList">
                     <!-- Hier werden die Marker angezeigt -->
                 </ul>
+                
+                <div class="file-actions">
+                    <button onclick="downloadAsJSON()" class="download-btn">📄 Als JSON herunterladen</button>
+                    <button onclick="downloadAsText()" class="download-btn">📝 Als Text herunterladen</button>
+                    <input type="file" id="fileInput" accept=".json,.txt" style="display: none;" onchange="uploadFile(event)">
+                    <button onclick="document.getElementById('fileInput').click()" class="upload-btn">📂 Datei hochladen</button>
+                </div>
             </div>
         </div>
     </div>
