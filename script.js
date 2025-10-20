@@ -1,18 +1,19 @@
-// TimeQuest Namen-Verwaltung
-let names = ["Beispiel"];
+// Array für die Namen
+let names = ["Hogwarts", "Timequest", "alles andere"];
 
-// Beim Laden der Seite Namen anzeigen
+// Beim Laden der Seite - Liste versteckt lassen
 window.onload = function() {
-    showNames();
+    // Liste ist bereits versteckt durch style="display: none" in HTML
+    console.log('TimeQuest geladen - Liste versteckt');
 };
 
-// Name hinzufügen
+// Funktion: Name hinzufügen
 function addName() {
     const input = document.getElementById('nameInput');
     const newName = input.value.trim();
     
     if (newName === '') {
-        alert('Bitte einen Marker eingeben!');
+        alert('Bitte einen Namen eingeben!');
         return;
     }
     
@@ -24,9 +25,19 @@ function addName() {
     
     // Liste neu anzeigen
     showNames();
+}
+
+// Funktion: Alle Namen anzeigen
+function showNames() {
+    const list = document.getElementById('nameList');
+    list.innerHTML = ''; // Liste leeren
     
-    console.log('Marker hinzugefügt:', newName);
-    console.log('Aktuelle Marker:', names);
+    // Jeden Namen als Listenelement hinzufügen
+    names.forEach(function(name) {
+        const listItem = document.createElement('li');
+        listItem.textContent = name;
+        list.appendChild(listItem);
+    });
 }
 
 // Liste ein-/ausblenden
@@ -45,30 +56,3 @@ function toggleMarkerList() {
         button.textContent = '📋 Meine Marker anzeigen';
     }
 }
-
-// Alle Marker anzeigen
-function showNames() {
-    const list = document.getElementById('nameList');
-    list.innerHTML = ''; // Liste leeren
-    
-    // Jeden Namen als Listenelement hinzufügen
-    names.forEach(function(name, index) {
-        const listItem = document.createElement('li');
-        listItem.textContent = name;
-        list.appendChild(listItem);
-    });
-    
-    console.log('Namen angezeigt:', names);
-}
-
-// Enter-Taste im Input-Feld
-document.addEventListener('DOMContentLoaded', function() {
-    const input = document.getElementById('nameInput');
-    if (input) {
-        input.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                addName();
-            }
-        });
-    }
-});
