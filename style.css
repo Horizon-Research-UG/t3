@@ -33,3 +33,38 @@ p {
     margin: 20px 0;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255,255,255,0.2);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}

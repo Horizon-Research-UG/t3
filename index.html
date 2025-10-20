@@ -11,9 +11,19 @@
         <p>Willkommen in der geheimen Ecke von Hogwarts!</p>
         
         <div class="card">
-            <h2>Meine Missionen</h2>
-            <p>Hier beginnt dein magisches Abenteuer...</p>
+            <h2>Neue Priorität hinzufügen</h2>
+            <input type="text" id="nameInput" placeholder="Name eingeben...">
+            <button onclick="addName()">Hinzufügen</button>
+        </div>
+
+        <div class="card">
+            <h2>Meine Prioritäten</h2>
+            <ul id="nameList">
+                <!-- Hier werden die Namen angezeigt -->
+            </ul>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
