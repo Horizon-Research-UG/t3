@@ -29,6 +29,23 @@ function addName() {
     console.log('Aktuelle Marker:', names);
 }
 
+// Schnell-Marker hinzufügen
+function addQuickMarker(markerName) {
+    // Prüfen ob bereits vorhanden
+    if (names.includes(markerName)) {
+        alert('Marker "' + markerName + '" ist bereits vorhanden!');
+        return;
+    }
+    
+    // Marker zur Liste hinzufügen
+    names.push(markerName);
+    
+    // Liste neu anzeigen
+    showNames();
+    
+    console.log('Schnell-Marker hinzugefügt:', markerName);
+}
+
 // Alle Marker anzeigen
 function showNames() {
     const list = document.getElementById('nameList');

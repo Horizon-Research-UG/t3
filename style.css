@@ -68,3 +68,29 @@ li {
     padding: 10px;
     border-radius: 5px;
 }
+
+.quick-buttons {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.quick-buttons h3 {
+    margin-bottom: 15px;
+    color: rgba(255,255,255,0.9);
+}
+
+.quick-buttons button {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.quick-buttons button:hover {
+    background: linear-gradient(135deg, #ff5252, #f44336);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
