@@ -1,5 +1,5 @@
 // TimeQuest Namen-Verwaltung
-let names = ["Hogwarts", "Timequest", "alles andere"];
+let names = ["Beispiel"];
 
 // Beim Laden der Seite Namen anzeigen
 window.onload = function() {
@@ -12,7 +12,7 @@ function addName() {
     const newName = input.value.trim();
     
     if (newName === '') {
-        alert('Bitte einen Namen eingeben!');
+        alert('Bitte einen Marker eingeben!');
         return;
     }
     
@@ -25,11 +25,11 @@ function addName() {
     // Liste neu anzeigen
     showNames();
     
-    console.log('Name hinzugefügt:', newName);
-    console.log('Aktuelle Namen:', names);
+    console.log('Marker hinzugefügt:', newName);
+    console.log('Aktuelle Marker:', names);
 }
 
-// Alle Namen anzeigen
+// Alle Marker anzeigen
 function showNames() {
     const list = document.getElementById('nameList');
     list.innerHTML = ''; // Liste leeren
