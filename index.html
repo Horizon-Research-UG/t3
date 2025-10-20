@@ -14,21 +14,17 @@
             <h2>Neue Marker hinzufügen</h2>
             <input type="text" id="nameInput" placeholder="... Marker eingeben...">
             <button onclick="addName()">Hinzufügen</button>
-            
-            <div class="quick-buttons">
-                <h3>Schnell-Marker:</h3>
-                <button onclick="addQuickMarker('Hogwarts')">🏰 Hogwarts</button>
-                <button onclick="addQuickMarker('Timequest')">⏰ Timequest</button>
-                <button onclick="addQuickMarker('alles andere')">📝 alles andere</button>
-                <button onclick="addQuickMarker('Pause')">☕ Pause</button>
-            </div>
         </div>
 
         <div class="card">
-            <h2>Meine Marker</h2>
-            <ul id="nameList">
-                <!-- Hier werden die Marker angezeigt -->
-            </ul>
+            <button onclick="toggleMarkerList()" class="show-list-btn">📋 Meine Marker anzeigen</button>
+            
+            <div id="markerListContainer" style="display: none;">
+                <h2>Meine Marker</h2>
+                <ul id="nameList">
+                    <!-- Hier werden die Marker angezeigt -->
+                </ul>
+            </div>
         </div>
     </div>
 

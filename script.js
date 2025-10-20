@@ -29,21 +29,21 @@ function addName() {
     console.log('Aktuelle Marker:', names);
 }
 
-// Schnell-Marker hinzufügen
-function addQuickMarker(markerName) {
-    // Prüfen ob bereits vorhanden
-    if (names.includes(markerName)) {
-        alert('Marker "' + markerName + '" ist bereits vorhanden!');
-        return;
+// Liste ein-/ausblenden
+function toggleMarkerList() {
+    const container = document.getElementById('markerListContainer');
+    const button = document.querySelector('.show-list-btn');
+    
+    if (container.style.display === 'none') {
+        // Liste anzeigen
+        container.style.display = 'block';
+        button.textContent = '🙈 Meine Marker verstecken';
+        showNames(); // Liste aktualisieren
+    } else {
+        // Liste verstecken
+        container.style.display = 'none';
+        button.textContent = '📋 Meine Marker anzeigen';
     }
-    
-    // Marker zur Liste hinzufügen
-    names.push(markerName);
-    
-    // Liste neu anzeigen
-    showNames();
-    
-    console.log('Schnell-Marker hinzugefügt:', markerName);
 }
 
 // Alle Marker anzeigen
