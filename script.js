@@ -57,11 +57,10 @@ function toggleMarkerList() {
         container.style.display = 'block';
         button.textContent = '🙈 Meine Marker verstecken';
         showNames(); // Liste aktualisieren
-        alert('Liste sollte jetzt sichtbar sein!');
+
     } else {
         // Liste verstecken
         container.style.display = 'none';
         button.textContent = '📋 Meine Marker anzeigen';
-        alert('Liste sollte jetzt versteckt sein!');
     }
 }
