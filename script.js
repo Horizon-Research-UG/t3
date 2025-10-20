@@ -3,8 +3,14 @@ let names = ["Hogwarts", "Timequest", "alles andere"];
 
 // Beim Laden der Seite - Liste versteckt lassen
 window.onload = function() {
-    // Liste ist bereits versteckt durch style="display: none" in HTML
     console.log('TimeQuest geladen - Liste versteckt');
+    console.log('toggleMarkerList Funktion verfügbar:', typeof toggleMarkerList);
+    
+    // Test ob alle Elemente gefunden werden
+    const container = document.getElementById('markerListContainer');
+    const button = document.querySelector('.show-list-btn');
+    console.log('Container beim Laden gefunden:', container);
+    console.log('Button beim Laden gefunden:', button);
 };
 
 // Funktion: Name hinzufügen
@@ -42,17 +48,22 @@ function showNames() {
 
 // Liste ein-/ausblenden
 function toggleMarkerList() {
+    // Visueller Test - Alert statt Konsole
+    alert('Button wurde geklickt! Die Funktion funktioniert.');
+    
     const container = document.getElementById('markerListContainer');
     const button = document.querySelector('.show-list-btn');
     
-    if (container.style.display === 'none') {
+    if (container.style.display === 'none' || container.style.display === '') {
         // Liste anzeigen
         container.style.display = 'block';
         button.textContent = '🙈 Meine Marker verstecken';
         showNames(); // Liste aktualisieren
+        alert('Liste sollte jetzt sichtbar sein!');
     } else {
         // Liste verstecken
         container.style.display = 'none';
         button.textContent = '📋 Meine Marker anzeigen';
+        alert('Liste sollte jetzt versteckt sein!');
     }
 }
